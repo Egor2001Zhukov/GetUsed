@@ -41,8 +41,8 @@ class Migration(migrations.Migration):
                 ('time_to_complete', models.DurationField(verbose_name='Время для выполнения')),
                 ('is_public', models.BooleanField(verbose_name='Публичность')),
                 ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='Время создания')),
-                ('related_habit', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='GetUsed.habit', verbose_name='Связанная привычка')),
-                ('schedule', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='GetUsed.schedule', verbose_name='Расписание')),
+                ('related_habit', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='app.habit', verbose_name='Связанная привычка')),
+                ('schedule', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app.schedule', verbose_name='Расписание')),
                 ('user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Пользователь')),
             ],
             options={

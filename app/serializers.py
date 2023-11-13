@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from GetUsed import models
+from app import models
 
 
 class HabitSerializer(serializers.ModelSerializer):

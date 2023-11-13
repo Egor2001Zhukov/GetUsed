@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from GetUsed import models
+from app import models
 from users.models import User
 
 

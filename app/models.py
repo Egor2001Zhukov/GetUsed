@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields.array import ArrayField
-from GetUsed import validators
+from app import validators
 from users.models import User
 
 

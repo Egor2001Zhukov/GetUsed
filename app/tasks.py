@@ -4,7 +4,7 @@ import requests
 from celery import shared_task
 from dotenv import load_dotenv
 
-from GetUsed.models import Habit
+from app.models import Habit
 
 load_dotenv()
 

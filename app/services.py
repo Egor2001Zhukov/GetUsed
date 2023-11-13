@@ -3,7 +3,7 @@ import json
 from django.utils import timezone
 from django_celery_beat.models import CrontabSchedule, PeriodicTask
 
-from GetUsed import models
+from app import models
 
 
 def create_habit_task(habit_id):
@@ -24,7 +24,7 @@ def create_habit_task(habit_id):
 
     PeriodicTask.objects.create(
         name=f'habit{habit_id}',
-        task='GetUsed.tasks.send_telegram_notification',
+        task='app.tasks.send_telegram_notification',
         crontab=crontab_schedule,
         kwargs=json.dumps({'habit_id': habit_id, }),
         start_time=timezone.now(),

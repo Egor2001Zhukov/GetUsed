@@ -1,0 +1,10 @@
+venv
+.idea
+.env
+requirements.txt
+conf/nginx.conf
+.env.template
+.coverage
+celerybeat-schedule.bak
+celerybeat-schedule.dat
+celerybeat-schedule.dir
